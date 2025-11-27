@@ -1,0 +1,86 @@
+*{  
+    padding: 0;  
+    margin: 0;  
+    box-sizing: border-box;  
+}
+body{  
+    background-color: white;  
+    font-family: 'Poppins', sans-serif;  
+}
+
+.menu{  
+    padding: 0 10px 30px 10px; /* Top, Right, Bottom, Left */  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
+    grid-gap: 20px 40px; /* row-gap column-gap */  
+}
+.heading{  
+    background-color: lightblue;  
+    color: #ffffff;  
+    margin-bottom: 30px;  
+    padding: 30px 0;  
+    grid-column: 1 / -1; /* Make the heading span all columns */  
+    text-align: center;  
+}
+.heading h1{  
+    font-weight: 400;  
+    font-size: 30px;  
+    letter-spacing: 10px;  
+    margin-bottom: 10px;  
+}  
+&nbsp;  
+.heading h3{  
+    font-weight: 600;  
+    font-size: 22px;  
+    letter-spacing: 5px;  
+}
+.food-items{  
+    display: grid;  
+    position: relative;  
+    grid-template-rows: auto 1fr; /* Image takes auto height, details take remaining space */  
+    border-radius: 15px;  
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);  
+}
+.food-items img {  
+    position: relative;  
+    width: 100%;  
+    border-radius: 15px 15px 0 0; /* Rounded corners only at the top */  
+}
+.details {  
+    padding: 20px 10px;  
+    display: grid;  
+    grid-template-rows: auto 1fr 50px; /* Title/price, paragraph, button */  
+    grid-row-gap: 15px;  
+}
+.details-sub {  
+    display: grid;  
+    grid-template-columns: auto auto; /* Two columns for item name and price */  
+}
+.details-sub h5 {  
+    font-weight: 600;  
+    font-size: 18px;  
+}
+.price {  
+    text-align: right;  
+    color: coral;  
+}
+.details p {  
+    color: #6f6f6f;  
+    font-size: 15px;  
+    line-height: 28px;  
+    font-weight: 400;  
+    align-self: stretch; /* Make the paragraph fill available vertical space */  
+}
+.details button {  
+    background-color: lightcoral;  
+    border: none;  
+    color: #ffffff;  
+    font-size: 16px;  
+    font-weight: 600;  
+    border-radius: 5px;  
+    width: 180px;  
+    height: 40px;  
+    cursor: pointer;  
+    justify-self: center; /* Center the button horizontally */  
+    align-self: end; /* Align button to the bottom of its grid cell */  
+}
